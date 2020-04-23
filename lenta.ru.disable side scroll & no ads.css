@@ -1,0 +1,63 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+/* реклама */
+  [id^="context_"],
+  .b-adverts-sidebar, /* боковая колонка - dom.lenta.ru */
+  .b-topic__favorite-tooltip, /* всплывающее окно регистрации */
+  .b-topic__favorite-tooltip_visible,
+  section.b-goodnews,
+    
+  /* реклама > отдельные блоки */
+  .b-sidebar-menu__auth *,
+  .b-adverts-sidebar,
+     
+  /* реклама > шифрованные имена классов 20170712*/
+  section[class *="--"],
+  div[class *="--"],
+  /* анимированная реклама подписки на ленту - не могли сделать без назойливой анимации? */
+  .b-box iframe[name='banner']
+  {
+    display: none !important;
+  }
+  
+  div.b-banner *,
+  .b-banner-sidebar-rtb,
+  [id^="begun_"] * {
+    margin-left: -9999px;
+    height: 0 !important;
+    border-width: 0;
+    padding: 0 !important; 
+    margin: 0 !important;
+  }
+  
+  .b-banner-top-decorator,
+  .b-banner-sidebar-promo-decorator { margin:0; padding: 0; }
+  
+  /* реклама > баннеры - продолжаем выпиливать*/
+  .b-topic__favorite-tooltip_visible
+  { height: 0; visibility: hidden; }
+  
+  /* залипающий блок */
+  .b-sidebar-stickycolumn__sticky {position: static !important;}
+  
+  /* центрирование */
+  @media screen and (min-width: 1000px) {
+   body { 
+    text-align: center !important;
+    overflow: visible;
+   }
+  
+  #root,
+  #footer 
+  {
+    position: relative !important; left: 100px;
+    margin: auto !important;
+    text-align: left;
+  }
+  #root #sidebar-menu,
+  nav.js-sidebar
+  {
+    position: absolute !important; 
+    top: 0; left: -100px;
+    text-align: left;
+  }
+  }
