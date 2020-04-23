@@ -1,0 +1,6 @@
+ytd-app[scrolling_] {
+	overflow-x: unset;
+}
+.ytp-fullerscreen-edu-button {
+	display: none !important;
+}
